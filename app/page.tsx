@@ -52,19 +52,24 @@ export default function Page() {
           <ellipse cx="1144" cy="380" rx="27" ry="18" fill="#3d6b34" transform="rotate(-15 1144 380)"/>
         </svg>
       </div>
+
+      {/* Google Font - script */}
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');`}</style>
+
       <div style={{position:'relative',zIndex:1,maxWidth:'1100px',margin:'0 auto',padding:'20px'}}>
+
+        {/* Header */}
         <header style={{textAlign:'center',borderBottom:'1px solid #c8d8c0',paddingBottom:'20px',marginBottom:'40px'}}>
-          <h1 style={{fontSize:'2.5rem',letterSpacing:'4px',fontWeight:300,color:'#2c3e25'}}>A LITTLE DIFFERENT</h1>
+          <h1 style={{fontSize:'4rem',fontWeight:400,color:'#2c3e25',fontFamily:"'Great Vibes', cursive",marginBottom:'4px'}}>A Little Different</h1>
           <p style={{fontSize:'0.9rem',letterSpacing:'2px',color:'#7a9470'}}>HANDMADE IN ITALY · FINAL SALE</p>
         </header>
+
+        {/* Sale Banner */}
         <section style={{textAlign:'center',marginBottom:'60px'}}>
-          <h2 style={{fontSize:'1.8rem',fontWeight:300,marginBottom:'10px',color:'#2c3e25'}}>40 Years of Italian Craftsmanship</h2>
-          <p style={{fontSize:'1rem',color:'#556b4a',maxWidth:'600px',margin:'0 auto 20px'}}>
-            Handmade children's clothing crafted in Italy from the finest Italian fabrics.
-            We're offering our remaining inventory at blowout prices — all sales final.
-          </p>
           <p style={{fontSize:'1.4rem',color:'#b85c3a',fontWeight:600,letterSpacing:'1px'}}>UP TO 70% OFF · ALL SALES FINAL</p>
         </section>
+
+        {/* Categories */}
         <section style={{marginBottom:'60px'}}>
           <h3 style={{textAlign:'center',letterSpacing:'3px',fontWeight:300,marginBottom:'30px',color:'#2c3e25'}}>SHOP BY AGE</h3>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',gap:'20px',textAlign:'center'}}>
@@ -75,9 +80,21 @@ export default function Page() {
             ))}
           </div>
         </section>
+
+        {/* 40 Years Story - lower on page */}
+        <section style={{textAlign:'center',marginBottom:'60px',padding:'40px',background:'rgba(255,255,255,0.6)',border:'1px solid #c8d8c0'}}>
+          <h2 style={{fontSize:'1.6rem',fontWeight:300,marginBottom:'12px',color:'#2c3e25',fontFamily:"'Great Vibes', cursive",fontSize:'2.2rem'}}>40 Years of Italian Craftsmanship</h2>
+          <p style={{fontSize:'1rem',color:'#556b4a',maxWidth:'600px',margin:'0 auto'}}>
+            Handmade children's clothing crafted in Italy from the finest Italian fabrics.
+            We're offering our remaining inventory at blowout prices — all sales final.
+          </p>
+        </section>
+
+        {/* Footer */}
         <footer style={{textAlign:'center',borderTop:'1px solid #c8d8c0',paddingTop:'20px',color:'#7a9470',fontSize:'0.8rem'}}>
           <p>© A Little Different · All sales final · No returns or exchanges</p>
         </footer>
+
       </div>
     </div>
   )
