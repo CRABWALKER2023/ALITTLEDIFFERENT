@@ -105,7 +105,10 @@ export default function Page() {
         {/* Footer */}
         <footer style={{borderTop:'0.5px solid #c8d8c0',padding:'22px 40px',textAlign:'center'}}>
           <p style={{fontSize:'14px',color:'#2c3e25',letterSpacing:'1px',marginBottom:'6px'}}>(516) 374-7392</p>
-          <p style={{fontSize:'10px',color:'#7a9470',letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
+          <p style={{fontSize:'12px',color:'#2c3e25',letterSpacing:'1px',marginBottom:'6px'}}>
+  <a href="https://www.instagram.com/alittlediff405" target="_blank" style={{color:'#2c3e25',textDecoration:'none',letterSpacing:'1px'}}>📷 @alittlediff405</a>
+</p>
+<p style={{fontSize:'10px',color:'#7a9470',letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
         </footer>
 
       </div>
