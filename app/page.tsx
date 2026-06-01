@@ -83,7 +83,7 @@ export default function Page() {
 
         {/* 40 Years Story - lower on page */}
         <section style={{textAlign:'center',marginBottom:'60px',padding:'40px',background:'rgba(255,255,255,0.6)',border:'1px solid #c8d8c0'}}>
-          <h2 style={{fontSize:'1.6rem',fontWeight:300,marginBottom:'12px',color:'#2c3e25',fontFamily:"'Great Vibes', cursive",fontSize:'2.2rem'}}>40 Years of Italian Craftsmanship</h2>
+          <h2 style={{fontSize:'2.2rem',fontWeight:300,marginBottom:'12px',color:'#2c3e25',fontFamily:"'Great Vibes', cursive"}}>40 Years of Italian Craftsmanship</h2>
           <p style={{fontSize:'1rem',color:'#556b4a',maxWidth:'600px',margin:'0 auto'}}>
             Handmade children's clothing crafted in Italy from the finest Italian fabrics.
             We're offering our remaining inventory at blowout prices — all sales final.
