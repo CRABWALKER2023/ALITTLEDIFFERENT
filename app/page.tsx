@@ -87,7 +87,7 @@ export default function Page() {
               <div key={size} className="size-box" style={{border:'1px solid #e0c8d0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.95)',cursor:'pointer',position:'relative'}}>
                 <div style={{position:'absolute',top:0,left:0,right:0,height:'3px',background:'linear-gradient(90deg,#c87898,#f0b0c8)'}}></div>
                 <div style={{fontSize:'20px',fontWeight:300,color:'#2a1a1a',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
-                <div style={{fontSize:'10px',letterSpacing:'2px',color:'#c87898'}}>SHOP NOW</div>
+                <div style={{fontSize:'10px',letterSpacing:'2px',color:'#c87898'}}>SHOP NOW</div></a>
               </div>
             ))}
           </div>
