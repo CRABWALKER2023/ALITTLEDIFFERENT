@@ -73,7 +73,7 @@ export default function Page() {
         <section style={{marginBottom:'60px'}}>
           <h3 style={{textAlign:'center',letterSpacing:'3px',fontWeight:300,marginBottom:'30px',color:'#2c3e25'}}>SHOP BY AGE</h3>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',gap:'20px',textAlign:'center'}}>
-            {['Newborn','Infant (6-12m)','Toddler (1-3)','Kids (4-8)','Tween (8-12)'].map((cat) => (
+            {['Kids (4-8)','Tween (8-12)','Adult'].map((cat) => (
               <div key={cat} style={{border:'1px solid #c8d8c0',padding:'30px 10px',cursor:'pointer',background:'rgba(255,255,255,0.75)'}}>
                 <p style={{fontWeight:400,letterSpacing:'1px',color:'#2c3e25'}}>{cat}</p>
               </div>
