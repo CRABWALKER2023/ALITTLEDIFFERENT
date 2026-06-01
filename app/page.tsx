@@ -66,7 +66,7 @@ export default function Page() {
 
         {/* Sale Banner */}
         <section style={{textAlign:'center',marginBottom:'60px'}}>
-          <p style={{fontSize:'1.4rem',color:'#b85c3a',fontWeight:600,letterSpacing:'1px'}}>UP TO 70% OFF · ALL SALES FINAL</p>
+        
         </section>
 
         {/* Categories */}
