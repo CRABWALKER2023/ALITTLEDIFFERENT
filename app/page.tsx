@@ -18,7 +18,7 @@ export default function Page() {
           <ellipse cx="68" cy="530" rx="30" ry="20" fill="#2d6a35" transform="rotate(-25 68 530)"/>
           <ellipse cx="103" cy="460" rx="27" ry="18" fill="#4a9a55" transform="rotate(20 103 460)"/>
           <ellipse cx="70" cy="390" rx="29" ry="20" fill="#2d6a35" transform="rotate(-15 70 390)"/>
-          <ellipse cx="98" cy="320" rx="26" ry="18" fill="#4a9a55" transform="rotate(25 98 320)"/>
+          <ellipse cx="98" cy="320" rx="26" ry="18" fill="#4a9a55" transform="rotate(25 98 320)"/>f
           <ellipse cx="72" cy="250" rx="27" ry="18" fill="#2d6a35" transform="rotate(-20 72 250)"/>
           <path d="M580 950 Q575 760 588 570 Q596 380 578 150" stroke="#2d6a35" strokeWidth="1.7" fill="none"/>
           <ellipse cx="600" cy="880" rx="27" ry="18" fill="#4a9a55" transform="rotate(20 600 880)"/>
