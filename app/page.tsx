@@ -65,29 +65,29 @@ export default function Page() {
         <nav style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'14px 40px',borderBottom:'0.5px solid #c8d8c0'}}>
           <div style={{display:'flex',gap:'28px'}}>
             {['HOME','SHOP','OUR STORY','CONTACT'].map(link => (
-              <span key={link} className="nav-link" style={{fontSize:'11px',letterSpacing:'2.5px',color:'#7a9470',cursor:'pointer'}}>{link}</span>
+              <span key={link} className="nav-link" style={{fontSize:'11px',letterSpacing:'2.5px',#3d5c35,cursor:'pointer'}}>{link}</span>
             ))}
           </div>
           
-          <div style={{fontSize:'11px',letterSpacing:'2px',color:'#7a9470'}}>EST. 1984</div>
+          <div style={{fontSize:'11px',letterSpacing:'2px',#3d5c35}}>EST. 1984</div>
         </nav>
 
         {/* Hero */}
         <section style={{textAlign:'center',padding:'56px 32px 44px'}}>
-          <p style={{fontSize:'11px',letterSpacing:'3px',color:'#7a9470',margin:'0 0 10px'}}>HANDMADE IN ITALY</p>
+          <p style={{fontSize:'11px',letterSpacing:'3px',#3d5c35,margin:'0 0 10px'}}>HANDMADE IN ITALY</p>
           <h1 style={{fontFamily:"'Great Vibes', cursive",fontSize:'72px',color:'#2c3e25',lineHeight:1.1,margin:'0 0 12px',fontWeight:400}}>A Little Different</h1>
           <div style={{width:'50px',height:'0.5px',background:'#c8d8c0',margin:'0 auto 14px'}}></div>
-          <p style={{fontSize:'13px',letterSpacing:'2px',color:'#7a9470',fontStyle:'italic'}}>Italian fabrics · Exceptional craftsmanship</p>
+          <p style={{fontSize:'13px',letterSpacing:'2px',#3d5c35,fontStyle:'italic'}}>Italian fabrics · Exceptional craftsmanship</p>
         </section>
 
         {/* Shop */}
         <section style={{padding:'0 40px 56px'}}>
-          <p style={{textAlign:'center',fontSize:'10px',letterSpacing:'3px',color:'#7a9470',marginBottom:'20px'}}>SHOP BY SIZE</p>
+          <p style={{textAlign:'center',fontSize:'10px',letterSpacing:'3px',#3d5c35,marginBottom:'20px'}}>SHOP BY SIZE</p>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'14px',maxWidth:'500px',margin:'0 auto'}}>
             {['Girls 2–8','Teens 10–20'].map(size => (
               <div key={size} className="size-box" style={{border:'0.5px solid #c8d8c0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.8)',cursor:'pointer'}}>
                 <div style={{fontSize:'26px',fontWeight:300,color:'#2c3e25',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
-                <div style={{fontSize:'10px',letterSpacing:'2px',color:'#7a9470'}}>SHOP NOW</div>
+                <div style={{fontSize:'10px',letterSpacing:'2px',#3d5c35}}>SHOP NOW</div>
               </div>
             ))}
           </div>
@@ -99,7 +99,7 @@ export default function Page() {
           <p style={{fontSize:'15px',color:'#556b4a',lineHeight:1.9,maxWidth:'540px',margin:'0 auto',fontStyle:'italic'}}>
             For over 40 years, A Little Different has been crafting exceptional children's clothing by hand in Italy, using only the finest Italian fabrics. Every piece tells a story of tradition, care, and timeless style.
           </p>
-          <p style={{fontSize:'11px',color:'#7a9470',letterSpacing:'2px',marginTop:'16px'}}>FOUNDED 1984 · MADE IN ITALY · FAMILY OWNED</p>
+          <p style={{fontSize:'11px',#3d5c35,letterSpacing:'2px',marginTop:'16px'}}>FOUNDED 1984 · MADE IN ITALY · FAMILY OWNED</p>
         </section>
 
         {/* Footer */}
@@ -108,7 +108,7 @@ export default function Page() {
           <p style={{fontSize:'12px',color:'#2c3e25',letterSpacing:'1px',marginBottom:'6px'}}>
   <a href="https://www.instagram.com/alittlediff405" target="_blank" style={{color:'#2c3e25',textDecoration:'none',letterSpacing:'1px'}}>📷 @alittlediff405</a>
 </p>
-<p style={{fontSize:'10px',color:'#7a9470',letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
+<p style={{fontSize:'10px',#3d5c35,letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
         </footer>
 
       </div>
