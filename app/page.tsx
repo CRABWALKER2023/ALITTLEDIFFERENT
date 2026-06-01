@@ -68,7 +68,7 @@ export default function Page() {
               <span key={link} className="nav-link" style={{fontSize:'11px',letterSpacing:'2.5px',color:'#7a9470',cursor:'pointer'}}>{link}</span>
             ))}
           </div>
-          <div style={{fontFamily:"'Great Vibes', cursive",fontSize:'24px',color:'#2c3e25'}}>A Little Different</div>
+          
           <div style={{fontSize:'11px',letterSpacing:'2px',color:'#7a9470'}}>EST. 1984</div>
         </nav>
 
