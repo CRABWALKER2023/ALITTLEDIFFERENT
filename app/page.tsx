@@ -18,7 +18,7 @@ export default function Page() {
           <ellipse cx="68" cy="530" rx="30" ry="20" fill="#2d6a35" transform="rotate(-25 68 530)"/>
           <ellipse cx="103" cy="460" rx="27" ry="18" fill="#4a9a55" transform="rotate(20 103 460)"/>
           <ellipse cx="70" cy="390" rx="29" ry="20" fill="#2d6a35" transform="rotate(-15 70 390)"/>
-          <ellipse cx="98" cy="320" rx="26" ry="18" fill="#4a9a55" transform="rotate(25 98 320)"/>f
+          <ellipse cx="98" cy="320" rx="26" ry="18" fill="#4a9a55" transform="rotate(25 98 320)"/>
           <ellipse cx="72" cy="250" rx="27" ry="18" fill="#2d6a35" transform="rotate(-20 72 250)"/>
           <path d="M580 950 Q575 760 588 570 Q596 380 578 150" stroke="#2d6a35" strokeWidth="1.7" fill="none"/>
           <ellipse cx="600" cy="880" rx="27" ry="18" fill="#4a9a55" transform="rotate(20 600 880)"/>
@@ -61,8 +61,8 @@ export default function Page() {
 
         <section style={{padding:'0 40px 56px'}}>
           <p style={{textAlign:'center',fontSize:'11px',letterSpacing:'3px',color:'#2d6a35',marginBottom:'20px'}}>SHOP BY SIZE</p>
-          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'14px',maxWidth:'500px',margin:'0 auto'}}>
-            {['Girls 2–8','Teens 10–20'].map(size => (
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'14px',maxWidth:'740px',margin:'0 auto'}}>
+            {['Girls 2–8','Teens 10–20','Ladieswear'].map(size => (
               <div key={size} className="size-box" style={{border:'1px solid #a8c8a0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.9)',cursor:'pointer',position:'relative'}}>
                 <div style={{position:'absolute',top:0,left:0,right:0,height:'3px',background:'linear-gradient(90deg,#4a9a55,#7dc87f)'}}></div>
                 <div style={{fontSize:'22px',fontWeight:300,color:'#1a3d20',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
