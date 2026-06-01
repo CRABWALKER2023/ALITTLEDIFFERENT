@@ -1,7 +1,13 @@
 export default function Page() {
   return (
-    <div style={{fontFamily:'Georgia,serif',minHeight:'100vh',position:'relative',overflow:'hidden',background:'#f9f8f5'}}>
-      <div style={{position:'fixed',inset:0,zIndex:0,opacity:0.15,pointerEvents:'none'}}>
+    <div style={{fontFamily:"'Cormorant Garamond', Georgia, serif",minHeight:'100vh',position:'relative',overflow:'hidden',background:'#f9f8f5'}}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
+        .nav-link:hover { color:#2c3e25 !important; }
+        .size-box:hover { background:#fff !important; border-color:#7a9470 !important; }
+      `}</style>
+
+      <div style={{position:'fixed',inset:0,zIndex:0,opacity:0.12,pointerEvents:'none'}}>
         <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}} preserveAspectRatio="xMidYMid slice">
           <path d="M80 950 Q75 750 85 550 Q90 350 75 100" stroke="#4a7c40" strokeWidth="1.8" fill="none"/>
           <ellipse cx="100" cy="880" rx="28" ry="19" fill="#4a7c40" transform="rotate(20 100 880)"/>
@@ -53,47 +59,54 @@ export default function Page() {
         </svg>
       </div>
 
-      {/* Google Font - script */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');`}</style>
+      <div style={{position:'relative',zIndex:1}}>
 
-      <div style={{position:'relative',zIndex:1,maxWidth:'1100px',margin:'0 auto',padding:'20px'}}>
+        {/* Nav */}
+        <nav style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'14px 40px',borderBottom:'0.5px solid #c8d8c0'}}>
+          <div style={{display:'flex',gap:'28px'}}>
+            {['HOME','SHOP','OUR STORY','CONTACT'].map(link => (
+              <span key={link} className="nav-link" style={{fontSize:'11px',letterSpacing:'2.5px',color:'#7a9470',cursor:'pointer'}}>{link}</span>
+            ))}
+          </div>
+          <div style={{fontFamily:"'Great Vibes', cursive",fontSize:'24px',color:'#2c3e25'}}>A Little Different</div>
+          <div style={{fontSize:'11px',letterSpacing:'2px',color:'#7a9470'}}>EST. 1984</div>
+        </nav>
 
-        {/* Header */}
-        <header style={{textAlign:'center',borderBottom:'1px solid #c8d8c0',paddingBottom:'20px',marginBottom:'40px'}}>
-          <h1 style={{fontSize:'4rem',fontWeight:400,color:'#2c3e25',fontFamily:"'Great Vibes', cursive",marginBottom:'4px'}}>A Little Different</h1>
-          <p style={{fontSize:'0.9rem',letterSpacing:'2px',color:'#7a9470'}}>HANDMADE IN ITALY · FINAL SALE</p>
-        </header>
-
-        {/* Sale Banner */}
-        <section style={{textAlign:'center',marginBottom:'60px'}}>
-        
+        {/* Hero */}
+        <section style={{textAlign:'center',padding:'56px 32px 44px'}}>
+          <p style={{fontSize:'11px',letterSpacing:'3px',color:'#7a9470',margin:'0 0 10px'}}>HANDMADE IN ITALY</p>
+          <h1 style={{fontFamily:"'Great Vibes', cursive",fontSize:'72px',color:'#2c3e25',lineHeight:1.1,margin:'0 0 12px',fontWeight:400}}>A Little Different</h1>
+          <div style={{width:'50px',height:'0.5px',background:'#c8d8c0',margin:'0 auto 14px'}}></div>
+          <p style={{fontSize:'13px',letterSpacing:'2px',color:'#7a9470',fontStyle:'italic'}}>Italian fabrics · Exceptional craftsmanship</p>
         </section>
 
-        {/* Categories */}
-        <section style={{marginBottom:'60px'}}>
-          <h3 style={{textAlign:'center',letterSpacing:'3px',fontWeight:300,marginBottom:'30px',color:'#2c3e25'}}>SHOP BY AGE</h3>
-          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',gap:'20px',textAlign:'center'}}>
-            {['2–6','7–20'].map((cat) => (
-              <div key={cat} style={{border:'1px solid #c8d8c0',padding:'30px 10px',cursor:'pointer',background:'rgba(255,255,255,0.75)'}}>
-                <p style={{fontWeight:400,letterSpacing:'1px',color:'#2c3e25'}}>{cat}</p>
+        {/* Shop */}
+        <section style={{padding:'0 40px 56px'}}>
+          <p style={{textAlign:'center',fontSize:'10px',letterSpacing:'3px',color:'#7a9470',marginBottom:'20px'}}>SHOP BY SIZE</p>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'14px',maxWidth:'500px',margin:'0 auto'}}>
+            {['Girls 2–8','Teens 10–20'].map(size => (
+              <div key={size} className="size-box" style={{border:'0.5px solid #c8d8c0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.8)',cursor:'pointer'}}>
+                <div style={{fontSize:'26px',fontWeight:300,color:'#2c3e25',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
+                <div style={{fontSize:'10px',letterSpacing:'2px',color:'#7a9470'}}>SHOP NOW</div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* 40 Years Story - lower on page */}
-        <section style={{textAlign:'center',marginBottom:'60px',padding:'40px',background:'rgba(255,255,255,0.6)',border:'1px solid #c8d8c0'}}>
-          <h2 style={{fontSize:'2.2rem',fontWeight:300,marginBottom:'12px',color:'#2c3e25',fontFamily:"'Great Vibes', cursive"}}>40 Years of Italian Craftsmanship</h2>
-          <p style={{fontSize:'1rem',color:'#556b4a',maxWidth:'600px',margin:'0 auto'}}>
-            Handmade children's clothing crafted in Italy from the finest Italian fabrics.
-            We're offering our remaining inventory at blowout prices — all sales final.
+        {/* Our Story */}
+        <section style={{margin:'0 40px 56px',padding:'40px 48px',background:'rgba(255,255,255,0.6)',border:'0.5px solid #c8d8c0',textAlign:'center'}}>
+          <p style={{fontFamily:"'Great Vibes', cursive",fontSize:'36px',color:'#2c3e25',margin:'0 0 16px'}}>Our Story</p>
+          <p style={{fontSize:'15px',color:'#556b4a',lineHeight:1.9,maxWidth:'540px',margin:'0 auto',fontStyle:'italic'}}>
+            For over 40 years, A Little Different has been crafting exceptional children's clothing by hand in Italy, using only the finest Italian fabrics. Every piece tells a story of tradition, care, and timeless style.
           </p>
+          <p style={{fontSize:'11px',color:'#7a9470',letterSpacing:'2px',marginTop:'16px'}}>FOUNDED 1984 · MADE IN ITALY · FAMILY OWNED</p>
         </section>
 
-        <footer style={{textAlign:'center',borderTop:'1px solid #c8d8c0',paddingTop:'20px',color:'#7a9470',fontSize:'0.8rem'}}>
-  <p style={{marginBottom:'6px',fontSize:'0.95rem',color:'#2c3e25',letterSpacing:'1px'}}>📞 (516) 374-7392</p>
-  <p>© A Little Different · All sales final · No returns or exchanges</p>
-</footer>
+        {/* Footer */}
+        <footer style={{borderTop:'0.5px solid #c8d8c0',padding:'22px 40px',textAlign:'center'}}>
+          <p style={{fontSize:'14px',color:'#2c3e25',letterSpacing:'1px',marginBottom:'6px'}}>(516) 374-7392</p>
+          <p style={{fontSize:'10px',color:'#7a9470',letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
+        </footer>
 
       </div>
     </div>
