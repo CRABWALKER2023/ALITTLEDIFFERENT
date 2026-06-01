@@ -10,8 +10,8 @@ export default function Page() {
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
         .nav-link:hover { color:#2a1a1a !important; }
         .size-box:hover { background:#fff !important; border-color:#c87898 !important; }
-        .fabric { animation: fabricDrift 6s ease-in-out infinite; transform-origin: top left; }
-        @keyframes fabricDrift { 0%,100% { transform: rotate(-1deg) translate(0px,0px); } 50% { transform: rotate(1deg) translate(3px,4px); } }
+        .fabric { animation: fabricDrift 6s ease-in-out infinite; }
+        @keyframes fabricDrift { 0%,100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg) translate(3px,4px); } }
         .tape { stroke-dasharray:800; stroke-dashoffset:800; animation: tapeUnroll 4s ease-in-out infinite; }
         @keyframes tapeUnroll { 0% { stroke-dashoffset:800; opacity:0; } 30% { opacity:1; } 100% { stroke-dashoffset:0; opacity:1; } }
         .scissors-top { animation: snipTop 2.5s ease-in-out infinite; transform-origin: 148px 195px; }
@@ -19,7 +19,7 @@ export default function Page() {
         @keyframes snipTop { 0%,100% { transform: rotate(0deg); } 40%,60% { transform: rotate(-12deg); } }
         @keyframes snipBot { 0%,100% { transform: rotate(0deg); } 40%,60% { transform: rotate(12deg); } }
         .needle { animation: needleMove 3s ease-in-out infinite; }
-        @keyframes needleMove { 0%,100% { transform: translate(0,0) rotate(-30deg); } 50% { transform: translate(8px,-12px) rotate(-15deg); } }
+        @keyframes needleMove { 0%,100% { transform: translate(0,0); } 50% { transform: translate(8px,-12px); } }
         .spool { animation: spoolSpin 4s linear infinite; transform-origin: 514px 226px; }
         @keyframes spoolSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         .pin1 { animation: pinGlow 2s ease-in-out infinite 0s; }
@@ -27,17 +27,18 @@ export default function Page() {
         .pin3 { animation: pinGlow 2s ease-in-out infinite 0.8s; }
         .pin4 { animation: pinGlow 2s ease-in-out infinite 1.2s; }
         .pin5 { animation: pinGlow 2s ease-in-out infinite 1.6s; }
-        @keyframes pinGlow { 0%,100% { opacity:0.6; } 50% { opacity:1; filter: drop-shadow(0 0 3px #f0c840); } }
+        @keyframes pinGlow { 0%,100% { opacity:0.6; } 50% { opacity:1; } }
         .thimble { animation: thimbleBounce 3s ease-in-out infinite; }
         @keyframes thimbleBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
         .thread { stroke-dasharray:400; stroke-dashoffset:400; animation: threadDraw 5s ease-in-out infinite; }
         @keyframes threadDraw { 0% { stroke-dashoffset:400; opacity:0.3; } 60% { stroke-dashoffset:0; opacity:0.8; } 100% { stroke-dashoffset:0; opacity:0.8; } }
         .lace { animation: laceShimmer 4s ease-in-out infinite; }
-        @keyframes laceShimmer { 0%,100% { opacity:0.85; } 50% { opacity:1; filter: drop-shadow(0 0 6px rgba(240,176,200,0.5)); } }
+        @keyframes laceShimmer { 0%,100% { opacity:0.85; } 50% { opacity:1; } }
         .caption { animation: captionFade 3s ease-in-out infinite; }
         @keyframes captionFade { 0%,100% { opacity:0.7; } 50% { opacity:1; } }
-        .toggle-btn { cursor:pointer; font-family:'Cormorant Garamond',Georgia,serif; font-size:11px; letter-spacing:2px; color:#c87898; background:none; border:1px solid #e0c8d0; padding:6px 16px; display:block; margin:0 auto 0; transition:all 0.2s; }
+        .toggle-btn { cursor:pointer; font-family:'Cormorant Garamond',Georgia,serif; font-size:11px; letter-spacing:2px; color:#c87898; background:none; border:1px solid #e0c8d0; padding:6px 16px; transition:all 0.2s; }
         .toggle-btn:hover { background:#fff; color:#2a1a1a; }
+        .shop-link { text-decoration:none; display:block; }
       `}</style>
 
       <div style={{position:'fixed',inset:0,zIndex:0,opacity:0.1,pointerEvents:'none'}}>
@@ -64,6 +65,7 @@ export default function Page() {
       </div>
 
       <div style={{position:'relative',zIndex:1}}>
+
         <nav style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'14px 40px',background:'rgba(253,248,248,0.97)',borderBottom:'1px solid #e0c8d0'}}>
           <div style={{display:'flex',gap:'28px'}}>
             {['HOME','SHOP','OUR STORY','CONTACT'].map(link => (
@@ -84,11 +86,13 @@ export default function Page() {
           <p style={{textAlign:'center',fontSize:'11px',letterSpacing:'3px',color:'#3a2a2a',marginBottom:'20px'}}>SHOP BY SIZE</p>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'14px',maxWidth:'680px',margin:'0 auto'}}>
             {['Girls 2–8','Teens 10–20','Ladieswear'].map(size => (
-              <div key={size} className="size-box" style={{border:'1px solid #e0c8d0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.95)',cursor:'pointer',position:'relative'}}>
-                <div style={{position:'absolute',top:0,left:0,right:0,height:'3px',background:'linear-gradient(90deg,#c87898,#f0b0c8)'}}></div>
-                <div style={{fontSize:'20px',fontWeight:300,color:'#2a1a1a',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
-                <div style={{fontSize:'10px',letterSpacing:'2px',color:'#c87898'}}>SHOP NOW</div></a>
-              </div>
+              <a key={size} href="https://4bswqi-1t.myshopify.com" target="_blank" className="shop-link">
+                <div className="size-box" style={{border:'1px solid #e0c8d0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.95)',cursor:'pointer',position:'relative'}}>
+                  <div style={{position:'absolute',top:0,left:0,right:0,height:'3px',background:'linear-gradient(90deg,#c87898,#f0b0c8)'}}></div>
+                  <div style={{fontSize:'20px',fontWeight:300,color:'#2a1a1a',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
+                  <div style={{fontSize:'10px',letterSpacing:'2px',color:'#c87898'}}>SHOP NOW</div>
+                </div>
+              </a>
             ))}
           </div>
         </section>
@@ -102,47 +106,38 @@ export default function Page() {
           <p style={{fontSize:'11px',color:'#c87898',letterSpacing:'2px',marginTop:'16px'}}>FOUNDED 1996 · MADE IN ITALY · FAMILY OWNED</p>
         </section>
 
-        {/* Toggle button */}
         <div style={{textAlign:'center',marginBottom:'8px'}}>
           <button className="toggle-btn" onClick={() => setShowAnimation(!showAnimation)}>
             {showAnimation ? 'HIDE ATELIER SCENE' : 'SHOW ATELIER SCENE'}
           </button>
         </div>
 
-        {/* Animated atelier scene */}
         {showAnimation && (
           <div style={{borderTop:'1px solid #e0c8d0',borderBottom:'1px solid #e0c8d0',background:'linear-gradient(135deg,#f8f0ee,#f0e4ec)',overflow:'hidden'}}>
             <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',display:'block'}}>
               <defs>
                 <linearGradient id="tableTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#f8f2ee"/><stop offset="100%" stopColor="#ede4dc"/></linearGradient>
-                <linearGradient id="tableEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#c8a880"/><stop offset="100%" stopColor="#a88860"/></linearGradient>
                 <linearGradient id="laceGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#f5dce4"/><stop offset="100%" stopColor="#e8c8d4"/></linearGradient>
                 <linearGradient id="scissorMetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#d8d8d8"/><stop offset="100%" stopColor="#a0a0a0"/></linearGradient>
                 <linearGradient id="tapeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stopColor="#c8a030"/><stop offset="100%" stopColor="#e0b840"/></linearGradient>
                 <filter id="shadow"><feDropShadow dx="2" dy="3" stdDeviation="4" floodColor="#8a6060" floodOpacity="0.2"/></filter>
               </defs>
               <rect width="680" height="270" fill="url(#tableTop)"/>
-              <rect y="270" width="680" height="50" fill="url(#tableEdge)" rx="2"/>
+              <rect y="270" width="680" height="50" fill="#c8a880" rx="2"/>
               <rect y="265" width="680" height="10" fill="#d4b890" opacity="0.7"/>
-              <line x1="0" y1="135" x2="680" y2="135" stroke="#e0d0c8" strokeWidth="0.5" opacity="0.5"/>
-              <line x1="340" y1="0" x2="340" y2="270" stroke="#e0d0c8" strokeWidth="0.5" opacity="0.5"/>
               <rect x="30" y="15" width="100" height="130" fill="#d4e8f0" opacity="0.5" rx="3"/>
               <line x1="80" y1="15" x2="80" y2="145" stroke="#c0b0a8" strokeWidth="2.5"/>
               <line x1="30" y1="80" x2="130" y2="80" stroke="#c0b0a8" strokeWidth="2.5"/>
-              <polygon points="30,15 130,15 175,210 -15,210" fill="#fff8e8" opacity="0.1"/>
               <rect x="8" y="12" width="22" height="134" fill="#c8a888" rx="2"/>
               <rect x="160" y="188" width="360" height="12" fill="#c8a880" rx="2"/>
               <path d="M165 188 Q280 178 370 185 Q440 190 518 182 L518 196 Q440 204 370 198 Q280 192 165 200 Z" fill="#b8c8e8" opacity="0.85"/>
               <g className="fabric lace" filter="url(#shadow)">
-                <path d="M20 10 Q80 5 140 20 Q180 30 200 60 Q210 80 195 110 Q180 135 150 145 Q110 155 70 148 Q30 140 15 115 Q0 88 10 55 Q14 30 20 10 Z" fill="url(#laceGrad)" opacity="0.9"/>
+                <path d="M20 10 Q80 5 140 20 Q180 30 200 60 Q210 80 195 110 Q180 135 150 145 Q110 155 70 148 Q30 140 15 115 Q0 88 10 55 Z" fill="url(#laceGrad)" opacity="0.9"/>
                 <circle cx="50" cy="45" r="8" fill="none" stroke="#d8a0b8" strokeWidth="1.2" opacity="0.7"/>
                 <circle cx="50" cy="45" r="4" fill="#f0c0d0" opacity="0.5"/>
-                <circle cx="80" cy="35" r="7" fill="none" stroke="#d8a0b8" strokeWidth="1.2" opacity="0.6"/>
                 <circle cx="110" cy="50" r="8" fill="none" stroke="#d8a0b8" strokeWidth="1.2" opacity="0.7"/>
                 <circle cx="78" cy="72" r="8" fill="none" stroke="#d8a0b8" strokeWidth="1.2" opacity="0.7"/>
                 <circle cx="78" cy="72" r="4" fill="#f0c0d0" opacity="0.5"/>
-                <circle cx="50" cy="115" r="8" fill="none" stroke="#d8a0b8" strokeWidth="1.2" opacity="0.6"/>
-                <path d="M20 10 Q35 0 50 8 Q65 16 80 8 Q95 0 110 8 Q125 16 140 20" stroke="#d8a0b8" strokeWidth="1.5" fill="none" opacity="0.7"/>
               </g>
               <g filter="url(#shadow)">
                 <circle cx="148" cy="195" r="6" fill="#888" opacity="0.9"/>
@@ -159,19 +154,16 @@ export default function Page() {
                   <ellipse cx="55" cy="222" rx="22" ry="16" fill="none" stroke="#1a1a1a" strokeWidth="8"/>
                   <ellipse cx="55" cy="222" rx="14" ry="10" fill="#f5f0ec"/>
                 </g>
-                <path d="M68 174 Q72 168 76 174 Q72 180 68 174 Z" fill="#e8a0b8" opacity="0.9"/>
-                <path d="M68 216 Q72 210 76 216 Q72 222 68 216 Z" fill="#e8a0b8" opacity="0.9"/>
               </g>
               <g filter="url(#shadow)">
                 <path d="M280 180 Q320 160 370 170 Q410 178 440 165 Q480 150 520 160 Q550 168 570 180 Q590 192 600 210 Q608 228 595 240 Q580 252 560 248 Q540 244 530 230 Q520 218 530 205" stroke="url(#tapeGrad)" strokeWidth="14" fill="none" strokeLinecap="round" className="tape"/>
-                <path d="M280 180 Q320 160 370 170 Q410 178 440 165 Q480 150 520 160 Q550 168 570 180 Q590 192 600 210 Q608 228 595 240 Q580 252 560 248 Q540 244 530 230 Q520 218 530 205" stroke="#fff" strokeWidth="0.5" fill="none" strokeDasharray="5,10" opacity="0.6" className="tape"/>
                 <circle cx="280" cy="180" r="6" fill="#c8a030"/>
               </g>
               <g className="needle" filter="url(#shadow)">
                 <line x1="390" y1="100" x2="410" y2="145" stroke="#c0c0c0" strokeWidth="3" strokeLinecap="round"/>
                 <ellipse cx="391" cy="102" rx="3" ry="5" fill="none" stroke="#a0a0a0" strokeWidth="1.5" transform="rotate(-30 391 102)"/>
               </g>
-              <path d="M391 102 Q370 85 355 90 Q340 95 335 110 Q330 125 345 130" stroke="#c87898" strokeWidth="1.5" fill="none" strokeLinecap="round" className="thread"/>
+              <path d="M391 102 Q370 85 355 90 Q340 95 335 110" stroke="#c87898" strokeWidth="1.5" fill="none" strokeLinecap="round" className="thread"/>
               <g filter="url(#shadow)">
                 <rect x="460" y="195" width="32" height="50" fill="#c87898" rx="4"/>
                 <rect x="456" y="192" width="40" height="10" fill="#e090b0" rx="3"/>
@@ -225,6 +217,7 @@ export default function Page() {
           </p>
           <p style={{fontSize:'10px',color:'#887080',letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
         </footer>
+
       </div>
     </div>
   )
