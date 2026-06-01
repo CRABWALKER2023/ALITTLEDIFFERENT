@@ -90,10 +90,10 @@ export default function Page() {
           </p>
         </section>
 
-        {/* Footer */}
         <footer style={{textAlign:'center',borderTop:'1px solid #c8d8c0',paddingTop:'20px',color:'#7a9470',fontSize:'0.8rem'}}>
-          <p>© A Little Different · All sales final · No returns or exchanges</p>
-        </footer>
+  <p style={{marginBottom:'6px',fontSize:'0.95rem',color:'#2c3e25',letterSpacing:'1px'}}>📞 (516) 374-7392</p>
+  <p>© A Little Different · All sales final · No returns or exchanges</p>
+</footer>
 
       </div>
     </div>
