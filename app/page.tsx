@@ -86,7 +86,7 @@ export default function Page() {
           <p style={{textAlign:'center',fontSize:'11px',letterSpacing:'3px',color:'#3a2a2a',marginBottom:'20px'}}>SHOP BY SIZE</p>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'14px',maxWidth:'680px',margin:'0 auto'}}>
             {['Girls 2–8','Teens 10–20','Ladieswear'].map(size => (
-              <a key={size} href="https://4bswqi-1t.myshopify.com" target="_blank" className="shop-link">
+              <a key={size} href="https://4bswqi-1t.myshopify.com"  className="shop-link">
                 <div className="size-box" style={{border:'1px solid #e0c8d0',padding:'32px 16px',textAlign:'center',background:'rgba(255,255,255,0.95)',cursor:'pointer',position:'relative'}}>
                   <div style={{position:'absolute',top:0,left:0,right:0,height:'3px',background:'linear-gradient(90deg,#c87898,#f0b0c8)'}}></div>
                   <div style={{fontSize:'20px',fontWeight:300,color:'#2a1a1a',letterSpacing:'2px',marginBottom:'6px'}}>{size}</div>
@@ -213,7 +213,7 @@ export default function Page() {
         <footer style={{borderTop:'1px solid #e0c8d0',padding:'22px 40px',textAlign:'center',background:'rgba(253,248,248,0.7)'}}>
           <p style={{fontSize:'14px',color:'#2a1a1a',letterSpacing:'1px',marginBottom:'6px'}}>(516) 374-7392</p>
           <p style={{fontSize:'12px',color:'#3a2a2a',letterSpacing:'1px',marginBottom:'6px'}}>
-            <a href="https://www.instagram.com/alittlediff405" target="_blank" style={{color:'#3a2a2a',textDecoration:'none'}}>Instagram: @alittlediff405</a>
+            <a href="https://www.instagram.com/alittlediff405"  style={{color:'#3a2a2a',textDecoration:'none'}}>Instagram: @alittlediff405</a>
           </p>
           <p style={{fontSize:'10px',color:'#887080',letterSpacing:'1px'}}>© A Little Different · All rights reserved</p>
         </footer>
